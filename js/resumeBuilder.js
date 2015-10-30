@@ -6,17 +6,17 @@ This is empty on purpose! Your code to build the resume will go here.
  	"jobs" : [
  		{
  			"employer" : "Procter & Gamble",
- 			"title" : "LA Central Engineering (Intern)",
+ 			"title" : "Technical Engineer (Intern)",
  			"location" : "Mexico City",
  			"dates" : "June 2013 - December 2014",
- 			"description" : "Internship as a tehnical leader for the Latin America Central Engineering Organization for the Homecare Business."
+ 			"description" : "Internship in the central engineering organization in the P&G Latin America - Household Care business."
  		},
  		{
  			"employer" : "Procter & Gamble",
  			"title" : "Control & Information Systems Engineer",
  			"location" : "Mexico City",
  			"dates" : "January 2015 - Present",
- 			"description" : "Regional leader of the C&IS organization for the P&G Latin America Homecare Business."
+ 			"description" : "Regional leader of the C&IS organization in the P&G Latin America - Household Care business. "
  		}
  	]
  }
