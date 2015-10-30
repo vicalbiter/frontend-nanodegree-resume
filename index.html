@@ -112,6 +112,16 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         an opening and closing set of slash asterisks for block comments.
     */
 
+    //append int button
+      $("#main").append(internationalizeButton);
+
+      //internationalize name function
+      var inName = function(name) {
+        nameSplit = name.split(" ");
+        intName = nameSplit[0] + " " + nameSplit[1].toUpperCase();
+        return intName;
+      }
+
       //fill the skills section
       if(bio.skills.length > 0) {
       $("#header").append(HTMLskillsStart);
