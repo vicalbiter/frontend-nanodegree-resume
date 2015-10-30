@@ -39,6 +39,7 @@ This is empty on purpose! Your code to build the resume will go here.
  	"age" : 24,
  	"role" : "Web Developer",
  	"contacts" : {
+ 		"mobile" : "+52 1 55 45 07 17 00",
  		"email" : "vic.albiter@gmail.com",
  		"github" : "vicalbiter",
  		"twitter" : "@vicalbiter",
@@ -60,20 +61,6 @@ var education = {
 		}
 	]
 }
-
-      //fill the skills section
-      if (bio.skills.length > 0) {
-      $("#header").append(HTMLskillsStart);
-
-      var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-      $("#skills").append(formattedSkill);
-
-      formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-      $("#skills").append(formattedSkill);
-
-      formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-      $("#skills").append(formattedSkill);
-    }
 
     //encapsulate display() function to the projects object
     projects.display = function() {
@@ -108,14 +95,14 @@ var education = {
         var formattedEmployerTitle = formattedEmployer + formattedJob; 
         $(".work-entry:last").append(formattedEmployerTitle);
 
-        var formattedDates = HTMLworkDates.replace("%data", work.jobs[job].dates);
+        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
         $(".work-entry:last").append(formattedDates);
-
-        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-        $(".work-entry:last").append(formattedDescription);
 
         var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
         $(".work-entry:last").append(formattedLocation);
+
+        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        $(".work-entry:last").append(formattedDescription);
         
       }
     }
@@ -142,13 +129,53 @@ var education = {
     	}
     }
 
+    //encapsulate display() function to the bio object
+    bio.display = function() {
+
+    	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+    	$("#header").prepend(formattedRole);
+
+    	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+    	$("#header").prepend(formattedName);
+
+    	var formattedPic = HTMLbioPic.replace("%data%", bio.pictureURL);
+    	$("#header").append(formattedPic);
+
+    	//fill the skills section
+      	if (bio.skills.length > 0) {
+	      	$("#header").append(HTMLskillsStart);
+
+	      	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	      	$("#skills").append(formattedSkill);
+
+	      	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	      	$("#skills").append(formattedSkill);
+
+	      	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	      	$("#skills").append(formattedSkill);
+    	}
+
+    	//fill the top contacts section
+    	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+    	$("#topContacts").append(formattedMobile);
+
+    	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+		$("#topContacts").append(formattedEmail);
+
+		var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+		$("#topContacts").append(formattedTwitter);
+
+    	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+		$("#topContacts").append(formattedGithub);
+
+    }
     
 
     //display the projects section
     work.display();
     projects.display();
     education.display();
-
+    bio.display();
 
     //include a map
     $("#mapDiv").append(googleMap);
