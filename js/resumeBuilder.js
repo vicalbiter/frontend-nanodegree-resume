@@ -6,13 +6,13 @@ This is empty on purpose! Your code to build the resume will go here.
  	"jobs" : [
  		{
  			"employer" : "Procter & Gamble",
- 			"title" : "LA Central Engineering - Intern",
+ 			"title" : "LA Central Engineering (Intern)",
  			"location" : "Mexico City",
  			"dates" : "June 2013 - December 2014",
  			"description" : "Internship as a tehnical leader for the Latin America Central Engineering Organization for the Homecare Business."
  		},
  		{
- 		"employer" : "Procter & Gamble",
+ 			"employer" : "Procter & Gamble",
  			"title" : "Control & Information Systems Engineer",
  			"location" : "Mexico City",
  			"dates" : "January 2015 - Present",
