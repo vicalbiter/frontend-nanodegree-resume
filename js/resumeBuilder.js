@@ -28,7 +28,7 @@ This is empty on purpose! Your code to build the resume will go here.
  			"dates" : "TBC",
  			"description" : "TBC",
  			"images" : [
- 				"TBC"
+ 				
  			]
  		}
  	]
@@ -51,18 +51,13 @@ This is empty on purpose! Your code to build the resume will go here.
 
 var education = {
 	"schools" : [
-	{
-		"name" : "ITESM",
-		"city" : "Toluca, Estado de Mexico",
-		"degree" : "International Baccalaurate",
-		"major" : "none"
-	},
-	{
-		"name" : "UNAM",
-		"city" : "Mexico City",
-		"degree" : "B.Eng",
-		"major" : "Mechatronics Engineering"
-	}
+		{
+			"name" : "UNAM",
+			"location" : "Mexico City",
+			"degree" : "B.Eng",
+			"major" : "Mechatronics Engineering",
+			"dates" : "2009 - 2014"
+		}
 	]
 }
 
@@ -80,9 +75,32 @@ var education = {
       $("#skills").append(formattedSkill);
     }
 
-    //declare displayWork function
-    var displayWork = function() {
-      for (job in work.jobs) {
+    //encapsulate display() function to the projects object
+    projects.display = function() {
+      for (var project in projects.projects) {
+        $("#projects").append(HTMLprojectStart);
+
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        $(".project-entry:last").append(formattedTitle);
+
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+        $(".project-entry:last").append(formattedDescription);
+
+        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+        $(".project-entry:last").append(formattedDates);
+
+        if (projects.projects[project].images.length > 0) {
+          for (image in projects.projects[project].images) {
+            var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+            $(".project-entry:last").append(formattedImage);
+          }
+        }
+      }
+    }
+
+    //encapsulate display() function to the work object
+    work.display = function() {
+      for (var job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
 
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -102,65 +120,37 @@ var education = {
       }
     }
 
-    //fill the works section
-    displayWork();
+    //encapsulate display() function to the education object
+    education.display = function() {
+    	for (var school in education.schools) {
+    		$("#education").append(HTMLschoolStart);
 
-    //encapsulate display() function to the projects object
-    projects.display = function() {
-      for (project in projects.projects) {
-        $("#projects").append(HTMLprojectStart);
+    		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+    		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+    		var formattedNameDegree = formattedName + formattedDegree;
+    		$(".education-entry:last").append(formattedNameDegree);
 
-        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-        $(".project-entry:last").append(formattedTitle);
+    		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+    		$(".education-entry:last").append(formattedDates);
 
-        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-        $(".project-entry:last").append(formattedDescription);
+    		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+    		$(".education-entry:last").append(formattedLocation);
 
-        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-        $(".project-entry:last").append(formattedDates);
+    		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+    		$(".education-entry:last").append(formattedMajor);
 
-        if (project.projects[project].images.length > 0) {
-          for (image in projects.projects[project].images) {
-            var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-            $(".project-entry:last").append(formattedImage);
-          }
-        }
-      }
+    	}
     }
 
+    
+
     //display the projects section
+    work.display();
     projects.display();
+    education.display();
 
 
- /*
+    //include a map
+    $("#mapDiv").append(googleMap);
 
- var awesomeThoughts = "My name is Vicente and I am AWESOME!";
- console.log(awesomeThoughts);
-
- var funThoughts = awesomeThoughts.replace("AWESOME", "FUN");
- console.log(funThoughts);
-
- var name = "Vicente Albiter";
- var role = "Web Developer"
-
- var formattedName = HTMLheaderName.replace("%data%", name);
- var formattedRole = HTMLheaderRole.replace("%data%", role);
-
- $("#header").prepend([formattedRole]);
- $("#header").prepend([formattedName]);
-
- $("#main").append([work.position]);
- $("#main").append([education.name]);
-
- var work = {};
- work.position = "Control Engineer";
- work.employer = "Procter & Gamble";
- work.years = 1;
- work.city = "Mexico City";
-
- var education = {};
- education["name"] = "UNAM";
- education["years"] = "2009 - 2014";
- education["city"] = "Mexico City"
-*/
 
