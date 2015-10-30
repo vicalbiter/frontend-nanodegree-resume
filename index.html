@@ -126,25 +126,30 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       $("#skills").append(formattedSkill);
     }
 
-    //fill the works section
-    for(job in work.jobs) {
-      $("#workExperience").append(HTMLworkStart);
+    //declare displayWork function
+    var displayWork = function() {
+      for(job in work.jobs) {
+        $("#workExperience").append(HTMLworkStart);
 
-      var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-      var formattedJob = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-      var formattedEmployerTitle = formattedEmployer + formattedJob; 
-      $(".work-entry:last").append(formattedEmployerTitle);
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        var formattedJob = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        var formattedEmployerTitle = formattedEmployer + formattedJob; 
+        $(".work-entry:last").append(formattedEmployerTitle);
 
-      var formattedDates = HTMLworkDates.replace("%data", work.jobs[job].dates);
-      $(".work-entry:last").append(formattedDates);
+        var formattedDates = HTMLworkDates.replace("%data", work.jobs[job].dates);
+        $(".work-entry:last").append(formattedDates);
 
-      var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-      $(".work-entry:last").append(formattedDescription);
+        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        $(".work-entry:last").append(formattedDescription);
 
-      var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-      $(".work-entry:last").append(formattedLocation);
-      
+        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+        $(".work-entry:last").append(formattedLocation);
+        
+      }
     }
+
+    //fill the works section
+    displayWork();
 
 
     //set background color to black if there is no information available
