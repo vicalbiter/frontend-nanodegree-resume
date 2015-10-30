@@ -113,7 +113,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     */
 
       //fill the skills section
-      if(bio.skills.length > 0) {
+      if (bio.skills.length > 0) {
       $("#header").append(HTMLskillsStart);
 
       var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
@@ -128,7 +128,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
     //declare displayWork function
     var displayWork = function() {
-      for(job in work.jobs) {
+      for (job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
 
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -150,6 +150,32 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
     //fill the works section
     displayWork();
+
+    //encapsulate display() function to the projects object
+    projects.display = function() {
+      for (project in projects.projects) {
+        $("#projects").append(HTMLprojectStart);
+
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        $(".project-entry:last").append(formattedTitle);
+
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+        $(".project-entry:last").append(formattedDescription);
+
+        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+        $(".project-entry:last").append(formattedDates);
+
+        if (project.projects[project].images.length > 0) {
+          for (image in projects.projects[project].images) {
+            var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+            $(".project-entry:last").append(formattedImage);
+          }
+        }
+      }
+    }
+
+    //display the projects section
+    projects.display();
 
 
     //set background color to black if there is no information available
