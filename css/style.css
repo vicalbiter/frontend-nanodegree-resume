@@ -22,6 +22,8 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 0 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -129,7 +131,9 @@ a {
 
 /* TODO: Replace with image later */
 header {
-  background: url(../images/mexico_city.jpg);
+  background: url(../images/header.jpg);
+  background-size: cover;
+  background-size: cover;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -203,6 +207,32 @@ span {
   }
 }
 
+/***Sections***/
+section {
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.black-section {
+  background-color: #232323;
+  color: #fff;
+}
+
+.section-header {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+/***Projects***/
+.img-project {
+  max-width: 200px;
+}
+
+
+/***Map***/
 #map {
   display: block;
   height: 100%;

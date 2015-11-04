@@ -24,12 +24,10 @@ This is empty on purpose! Your code to build the resume will go here.
  var projects = {
  	"projects" : [
  		{
- 			"title" : "TBC",
- 			"dates" : "TBC",
- 			"description" : "TBC",
- 			"images" : [
- 				
- 			]
+ 			"title" : "Project Dummy - Wes and Pat",
+ 			"dates" : "",
+ 			"description" : "As I do not have any relevant web-development project to show yet, I'm placeholding this section with Django Reinhardt and Wes Montgomery, two of my favorite guitarists of all time.",
+ 			"images" : ["images/django.jpg","images/wes.jpg"]
  		}
  	]
  }
