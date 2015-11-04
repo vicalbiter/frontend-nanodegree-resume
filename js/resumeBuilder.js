@@ -169,9 +169,9 @@ var education = {
 		$("#topContacts").append(formattedGithub);
 
     }
-    
 
     //display the projects section
+    //buildGrid('_header');
     work.display();
     projects.display();
     education.display();
@@ -180,4 +180,23 @@ var education = {
     //include a map
     $("#mapDiv").append(googleMap);
 
+    /*The following is a function that takes a string (which represents a specific section
+     in the DOM) an argument. From this, it builds a bootstrap with a container -> row -> col-sm-12
+     structure. The input string, which is in the form of "_section" will generate the
+     proper newID that corresponds to what is already coded in the original solution. That is,
+     a "_header" section will build a grid with its inner column labeled as "header", a 
+     "_workExperience" section will build a grid with its inner column labeled as "workExperience", 
+     etcetera.*/
 
+    /***Experimental function 
+    function buildGrid(_section) {
+        var selector = $('#' + _section)
+        var newID = _section.slice(1);
+        var container = $('<div class="container"></div>');
+        var row = $('<div class="row"></div>');
+        var column = $('<div id="' + newID + '" class="col-sm-12 center-content clear-fix"></div>')
+        selector.append(container);
+        container.append(row);
+        row.append(column);
+    }
+    ***/
