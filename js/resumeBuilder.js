@@ -25,7 +25,7 @@ This is empty on purpose! Your code to build the resume will go here.
  	"projects" : [
  		{
  			"title" : "Project Dummy - Wes and Pat",
- 			"dates" : "",
+ 			"dates" : "November 2015 - Present",
  			"description" : "As I do not have any relevant web-development project to show yet, I'm placeholding this section with Django Reinhardt and Wes Montgomery, two of my favorite guitarists of all time.",
  			"images" : ["images/django.jpg","images/wes.jpg"]
  		}
@@ -68,17 +68,18 @@ var education = {
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
         $(".project-entry:last").append(formattedTitle);
 
-        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-        $(".project-entry:last").append(formattedDescription);
-
         var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
         $(".project-entry:last").append(formattedDates);
 
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+        $(".project-entry:last").append(formattedDescription);
+
         if (projects.projects[project].images.length > 0) {
-          for (image in projects.projects[project].images) {
-            var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-            $(".project-entry:last").append(formattedImage);
-          }
+            $(".project-entry:last").append(HTMLprojectImageHolder);
+            for (image in projects.projects[project].images) {
+                var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+                $(".img-holder:last").append(formattedImage);
+            }
         }
       }
     }
