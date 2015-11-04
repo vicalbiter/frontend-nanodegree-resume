@@ -88,7 +88,7 @@ p {
 a {
   color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   display: block;
 }
 
@@ -166,7 +166,7 @@ img {
 }
 
 span {
-  padding: 5px;
+  /*padding: 5px;*/
 }
 
 #lets-connect {
@@ -209,6 +209,29 @@ span {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+}
+
+/***Navbar***/
+.navbar-default {
+  background-color: rgba(204, 203, 203, 0.73);
+  font-style: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: black;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: rgba(231, 231, 231, 0.42);
+}
+
+.navbar-brand {
+  padding: 5px 0 5px 10px;
+} /***Override the navbar-brand class in order to make the logo fit its container***/
+
+.logo {
+  max-height: 100%;
+  padding: 0;
 }
 
 @media only screen and (min-width: 750px) {
