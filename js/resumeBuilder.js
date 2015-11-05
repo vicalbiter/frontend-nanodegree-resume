@@ -57,7 +57,14 @@ var education = {
 			"major" : "Mechatronics Engineering",
 			"dates" : "2009 - 2014"
 		}
-	]
+	],
+    "onlineClasses" : [
+        {
+            "title" : "Front-End Web Development Nanodegree",
+            "school" : "Udacity",
+            "dates" : "September 2015 - Present"
+        }
+    ]
 }
 
     //encapsulate display() function to the projects object
@@ -126,6 +133,19 @@ var education = {
     		$(".education-entry:last").append(formattedMajor);
 
     	}
+
+        $("#education").append(HTMLonlineClasses);
+        for (var onlineClass in education.onlineClasses) {
+            $("#education").append(HTMLschoolStart);
+
+            var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineClasses[onlineClass].title);
+            var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineClasses[onlineClass].school);
+            var formattedTitleSchool = formattedTitle + formattedSchool;
+            $(".education-entry:last").append(formattedTitleSchool);
+
+            var formattedDates = HTMLonlineDates.replace("%data%", education.onlineClasses[onlineClass].dates);
+            $(".education-entry:last").append(formattedDates);
+        }
     }
 
     //encapsulate display() function to the bio object
