@@ -42,6 +42,7 @@ var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImageHolder ='<div class="img-holder"></div>';
 var HTMLprojectImage = '<img src="%data%" class="project-image img-circle">';
+var HTMLprojectButton = '<div class="col-sm-12 text-right"><a href="%data%" class="btn btn-default" role="button">Visit my porfolio!</a></div>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';

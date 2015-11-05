@@ -29,7 +29,8 @@ This is empty on purpose! Your code to build the resume will go here.
  			"description" : "As I do not have any relevant web-development project to show yet, I'm placeholding this section with Django Reinhardt and Wes Montgomery, two of my favorite guitarists of all time.",
  			"images" : ["images/django.jpg","images/wes.jpg"]
  		}
- 	]
+ 	],
+    "porfolioURL" : "#"
  }
 
  var bio = {
@@ -87,7 +88,11 @@ var education = {
                 var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
                 $(".img-holder:last").append(formattedImage);
             }
+
+            var portfolioButton = $(HTMLprojectButton.replace("%data%", projects.porfolioURL));
+            portfolioButton.insertAfter("#projects");
         }
+
       }
     }
 
