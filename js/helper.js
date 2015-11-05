@@ -60,6 +60,14 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
+var HTMLkeySkillStart = '<div class="skillcolumn-entry col-sm-4"></div>';
+var HTMLkeyProgramming = '<h3 class="section-subheader white-header text-uppercase">Programming <strong>Skills</strong></h3><hr align="left" class="hr-orange-mini">';
+var HTMLkeyLanguages = '<h3 class="section-subheader white-header text-uppercase">Language <strong>Skills</strong></h3><hr align="left" class="hr-orange-mini">';
+var HTMLkeySoft = '<h3 class="section-subheader white-header text-uppercase">Soft <strong>Skills</strong></h3><hr align="left" class="hr-orange-mini">';
+var HTMLkeySkillTitle = '<div class="title-text">%data%</div>';
+var HTMLkeySkillLevel = '<div class="level-text">%data%</div>';
+var HTMLkeySkillSoft = '<div class="title-text">%data%</div>';
+
 
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.

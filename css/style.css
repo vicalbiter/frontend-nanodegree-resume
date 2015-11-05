@@ -88,6 +88,15 @@ h5 {
 
 }
 
+.level-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: right;
+  margin-right: 20%;
+}
+
 p {
   font-size: 14px;
   color: #333;
@@ -280,6 +289,10 @@ section {
   max-height: 100%;
 }
 
+/***Key Skills***/
+#keySkills {
+  margin-top: 15px;
+}
 
 /***Map***/
 #map {

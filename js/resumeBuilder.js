@@ -68,6 +68,34 @@ var education = {
     ]
 }
 
+var keySkills = {
+    "programming" : [
+        {
+            "language" : "JavaScript",
+            "level" : "Beginner"
+        },
+        {
+            "language" : "HTML",
+            "level" : "Beginner"
+        },
+        {
+            "language" : "CSS",
+            "level" : "Beginner"
+        }
+    ],
+    "languages" : [
+        {
+            "language" : "Spanish",
+            "level" : "Native"
+        },
+        {
+            "language" : "English",
+            "level" : "Proficient"
+        }
+    ],
+    "soft" : ["Self-Taught", "Team-Player", "Adaptable"]
+}
+
     //encapsulate display() function to the projects object
     projects.display = function() {
       for (var project in projects.projects) {
@@ -194,12 +222,52 @@ var education = {
 
     }
 
+    keySkills.display = function() {
+
+        //fill the programming skills column
+        if (keySkills.programming.length > 0) {
+            $("#keySkills").append(HTMLkeySkillStart);
+            $(".skillcolumn-entry:last").append(HTMLkeyProgramming)
+            for (var programmingSkill in keySkills.programming) {
+                var formattedSkillTitle = HTMLkeySkillTitle.replace("%data%", keySkills.programming[programmingSkill].language);
+                var formattedSkillLevel = HTMLkeySkillLevel.replace("%data%", keySkills.programming[programmingSkill].level);
+                $(".skillcolumn-entry:last").append(formattedSkillTitle);
+                $(".title-text:last").append(formattedSkillLevel);
+            }          
+        }
+
+        //fill the languages column
+        if (keySkills.languages.length > 0) {
+            $("#keySkills").append(HTMLkeySkillStart);
+            $(".skillcolumn-entry:last").append(HTMLkeyLanguages);
+            for (var languageSkill in keySkills.languages) {
+                
+                var formattedSkillTitle = HTMLkeySkillTitle.replace("%data%", keySkills.languages[languageSkill].language);
+                var formattedSkillLevel = HTMLkeySkillLevel.replace("%data%", keySkills.languages[languageSkill].level);
+                $(".skillcolumn-entry:last").append(formattedSkillTitle);
+                $(".title-text:last").append(formattedSkillLevel);
+            }          
+        }
+
+        //fill the languages column
+        if (keySkills.soft.length > 0) {
+            $("#keySkills").append(HTMLkeySkillStart);
+            $(".skillcolumn-entry:last").append(HTMLkeySoft)
+            for (var softSkill = 0; softSkill < keySkills.soft.length; softSkill++) {
+                var formattedSkillSoft = HTMLkeySkillSoft.replace("%data%", keySkills.soft[softSkill]);
+                $(".skillcolumn-entry:last").append(formattedSkillSoft);
+            }          
+        }
+
+    }
+
     //display the projects section
     //buildGrid('_header');
     work.display();
     projects.display();
     education.display();
     bio.display();
+    keySkills.display();
 
     //include a map
     $("#mapDiv").append(googleMap);
