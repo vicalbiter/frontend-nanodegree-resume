@@ -129,17 +129,26 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
-header {
+/***Background***/
+body {
+  height: 100%;
   background: url(../images/header.jpg);
   background-size: cover;
-  background-size: cover;
-  background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #ffffff;
 }
+
+/*header {
+  height: 100%;
+  background: url(../images/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;
+}*/
 
 #header {
 
@@ -209,14 +218,19 @@ span {
 
 /***Sections***/
 section {
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 40px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-color: rgba(231, 231, 231, 0.11);
 }
 
 .black-section {
-  background-color: #232323;
+  background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
+}
+
+.white-section {
+  background-color: rgba(245, 166, 35, 0.09);
 }
 
 .section-header {
@@ -225,6 +239,10 @@ section {
   font-size: 35px;
   margin-bottom: 15px;
   padding-left: 0px;
+}
+
+.header-white {
+  color: #fff;
 }
 
 /***Projects***/
@@ -254,7 +272,8 @@ section {
 
 /***Navbar***/
 .navbar-default {
-  background-color: rgba(204, 203, 203, 0.73);
+  background-color: rgba(245, 166, 35, 0.09);
+  border-color: rgba(231, 231, 231, 0.11);
   font-style: "Montserrat", sans-serif;
   font-weight: 600;
   color: black;

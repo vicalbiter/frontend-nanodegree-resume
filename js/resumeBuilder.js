@@ -7,7 +7,7 @@ This is empty on purpose! Your code to build the resume will go here.
  		{
  			"employer" : "Procter & Gamble",
  			"title" : "Technical Engineer (Intern)",
- 			"location" : "Mexico City",
+ 			"location" : "Toluca",
  			"dates" : "June 2013 - December 2014",
  			"description" : "Internship in the central engineering organization in the P&G Latin America - Household Care business."
  		},
