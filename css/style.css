@@ -284,6 +284,7 @@ section {
 /***Map***/
 #map {
   display: block;
+  position: relative;
   height: 100%;
   margin: 0 5%;
   margin-top: 20px;
@@ -292,7 +293,7 @@ section {
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
+  padding-bottom: 15%;
 }
 
 /***Navbar***/
@@ -334,6 +335,10 @@ section {
   }
   .img-holder {
     display: block;
+  }
+
+  #mapDiv {
+    padding-bottom: 5%;
   }
 }
 
