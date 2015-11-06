@@ -48,7 +48,8 @@ var education = {
         "location": "Mexico City",
         "degree": "B.Eng",
         "major": "Mechatronics Engineering",
-        "dates": "2009 - 2014"
+        "dates": "2009 - 2014",
+        "url" : "www.ingenieria.unam.mx"
     }],
     "onlineClasses": [{
         "title": "Front-End Web Development Nanodegree",
