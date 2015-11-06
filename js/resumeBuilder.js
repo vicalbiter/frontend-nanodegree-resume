@@ -193,6 +193,7 @@ var keySkills = {
     	var formattedPic = HTMLbioPic.replace("%data%", bio.pictureURL);
     	$("#header").append(formattedPic);
 
+        /*As I already built a skills section, there is no need to display this
     	//fill the skills section
       	if (bio.skills.length > 0) {
 	      	$("#header").append(HTMLskillsStart);
@@ -206,19 +207,20 @@ var keySkills = {
 	      	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
 	      	$("#skills").append(formattedSkill);
     	}
+        */
 
     	//fill the top contacts section
     	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    	$("#topContacts").append(formattedMobile);
+    	$("#footerContacts").append(formattedMobile);
 
     	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-		$("#topContacts").append(formattedEmail);
+		$("#footerContacts").append(formattedEmail);
 
 		var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-		$("#topContacts").append(formattedTwitter);
+		$("#footerContacts").append(formattedTwitter);
 
     	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-		$("#topContacts").append(formattedGithub);
+		$("#footerContacts").append(formattedGithub);
 
     }
 
