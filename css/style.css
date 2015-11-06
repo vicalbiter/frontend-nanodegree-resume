@@ -27,13 +27,16 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
   color: #f5a623;
   line-height: 48px;
-  display: inline;
+  display: block;
 }
 
 h2 {
+  font-family: "Lato", sans-serif;
   font-style: bold;
   font-size: 24px;
   color: #999;
@@ -171,7 +174,7 @@ header {
 }
 
 #header {
-
+  padding-top: 100px;
 }
 
 .flex-box {
@@ -192,8 +195,8 @@ ul {
 }
 
 .biopic {
-  float: left;
-  padding: 10px;
+  padding: 20px;
+  margin: 0 auto;
   width: 200px;
   display: none;
 }

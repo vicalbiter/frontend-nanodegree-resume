@@ -34,7 +34,8 @@ This is empty on purpose! Your code to build the resume will go here.
  }
 
  var bio = {
- 	"name" : "Vicente Albiter",
+ 	"name" : "Vicente",
+    "lastname" : "Albiter",
  	"age" : 24,
  	"role" : "Web Developer",
  	"contacts" : {
@@ -184,11 +185,13 @@ var keySkills = {
     //encapsulate display() function to the bio object
     bio.display = function() {
 
-    	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    	$("#header").prepend(formattedRole);
+        var formattedFirstName = HTMLheaderName.replace("%data%", bio.name);
+        var formattedLastName = HTMLheaderLastName.replace("%data%", bio.lastname);
+        var formattedName = formattedFirstName + formattedLastName;
+        $("#header").append(formattedName);
 
-    	var formattedName = HTMLheaderName.replace("%data%", bio.name);
-    	$("#header").prepend(formattedName);
+        var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+        $("#header").append(formattedRole);
 
     	var formattedPic = HTMLbioPic.replace("%data%", bio.pictureURL);
     	$("#header").append(formattedPic);
