@@ -236,6 +236,7 @@ span {
   .welcome-message {
     display: none;
   }
+
 }
 
 /***Sections***/
@@ -317,17 +318,22 @@ section {
 
 /***Navbar***/
 .navbar-default {
-  background-color: rgba(245, 166, 35, 0.09);
+  background-color: rgba(0, 0, 0, 0.7);
   border-color: rgba(231, 231, 231, 0.11);
-  font-style: "Montserrat", sans-serif;
+  font-style: "Open Sans", sans-serif;
   font-weight: 600;
-  color: black;
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  background-color: rgba(231, 231, 231, 0.42);
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(245, 166, 35);
 }
 
 .navbar-brand {
@@ -361,7 +367,7 @@ section {
   }
 
   #mapDiv {
-    padding-bottom: 5%;
+    padding-bottom: 8%;
   }
 }
 
