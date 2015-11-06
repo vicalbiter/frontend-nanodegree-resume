@@ -275,7 +275,7 @@ section {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   padding-left: 0px;
 }
 
@@ -373,19 +373,25 @@ section {
 
 /***hr***/
 hr {
-  margin-top: 5px;
+  margin-top: 0px;
   margin-bottom: 5px;
 }
 
 .hr-orange {
   border-top: 3px solid #F5A623;
   width: 10%;
+  margin-bottom: 5px;
+}
+
+.hr-left {
+  float: left;
 }
 
 .hr-orange-mini {
   border-top: 3px solid;
   border-top-color: rgba(245, 166, 35, 0.3);
-  width: 3%;
+  width: 5%;
+  margin-bottom: 5px;
 }
 
 /***Form***/

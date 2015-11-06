@@ -52,7 +52,7 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
-var HTMLonlineClasses = '<h3 class="section-subheader black-header text-uppercase">Online <strong>Classes</strong></h3><hr align="left" class="hr-orange-mini">';
+var HTMLonlineClasses = '<h3 class="section-subheader black-header text-uppercase">Online <strong>Classes</strong></h3><hr class="hr-left hr-orange-mini">';
 var HTMLonlineTitle = '<div class="title-text">%data%';
 var HTMLonlineSchool = ' - %data%</div>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
@@ -62,9 +62,9 @@ var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 var HTMLkeySkillStart = '<div class="skillcolumn-entry col-sm-4"></div>';
-var HTMLkeyProgramming = '<h3 class="section-subheader white-header text-uppercase">Programming <strong>Skills</strong></h3><hr align="left" class="hr-orange-mini">';
-var HTMLkeyLanguages = '<h3 class="section-subheader white-header text-uppercase">Language <strong>Skills</strong></h3><hr align="left" class="hr-orange-mini">';
-var HTMLkeySoft = '<h3 class="section-subheader white-header text-uppercase">Soft <strong>Skills</strong></h3><hr align="left" class="hr-orange-mini">';
+var HTMLkeyProgramming = '<h3 class="section-subheader white-header text-uppercase">Programming <strong>Skills</strong></h3><hr class="hr-left hr-orange-mini">';
+var HTMLkeyLanguages = '<h3 class="section-subheader white-header text-uppercase">Language <strong>Skills</strong></h3><hr class="hr-left hr-orange-mini">';
+var HTMLkeySoft = '<h3 class="section-subheader white-header text-uppercase">Soft <strong>Skills</strong></h3><hr class="hr-left hr-orange-mini">';
 var HTMLkeySkillTitle = '<div class="title-text">%data%</div>';
 var HTMLkeySkillLevel = '<div class="level-text">%data%</div>';
 var HTMLkeySkillSoft = '<div class="title-text">%data%</div>';
