@@ -37,7 +37,7 @@ h1 {
 
 h2 {
   font-family: "Lato", sans-serif;
-  font-style: bold;
+  font-weight: bold;
   font-size: 24px;
   color: #999;
   line-height: 29px;
@@ -45,7 +45,7 @@ h2 {
 }
 
 h3 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 20px;
   color: #000;
   line-height: 22px;
@@ -320,7 +320,7 @@ section {
 .navbar-default {
   background-color: rgba(0, 0, 0, 0.7);
   border-color: rgba(231, 231, 231, 0.11);
-  font-style: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   color: white;
 }
