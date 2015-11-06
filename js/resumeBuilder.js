@@ -28,9 +28,7 @@ var projects = {
 };
 
 var bio = {
-    "name": "Vicente",
-    "lastname": "Albiter",
-    "age": 24,
+    "name": "Vicente Albiter",
     "role": "Web Developer",
     "contacts": {
         "mobile": "+52 1 55 45 07 17 00",
@@ -39,7 +37,7 @@ var bio = {
         "twitter": "@vicalbiter",
         "location": "Mexico City"
     },
-    "pictureURL": "images/me.jpg",
+    "biopic": "images/me.jpg",
     "welcomeMessage": "Welcome to my page",
     "skills": ["Programming", "Teamwork", "Leadership"]
 };
@@ -55,7 +53,8 @@ var education = {
     "onlineClasses": [{
         "title": "Front-End Web Development Nanodegree",
         "school": "Udacity",
-        "dates": "September 2015 - Present"
+        "dates": "September 2015 - Present",
+        "url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }]
 };
 
@@ -160,21 +159,29 @@ education.display = function() {
 
         formattedDates = HTMLonlineDates.replace("%data%", education.onlineClasses[onlineClass].dates);
         $(".education-entry:last").append(formattedDates);
+
+        var formattedURL = HTMLonlineURL.replace("%data%", education.onlineClasses[onlineClass].url);
+        $(".education-entry:last").append(formattedURL);
     }
 };
 
 //encapsulate display() function to the bio object
 bio.display = function() {
 
-    var formattedFirstName = HTMLheaderName.replace("%data%", bio.name);
-    var formattedLastName = HTMLheaderLastName.replace("%data%", bio.lastname);
+    //divide name into first and last
+    var name = bio.name.split(" ");
+    var firstName = name[0];
+    var lastName = name[1];
+
+    var formattedFirstName = HTMLheaderName.replace("%data%", firstName);
+    var formattedLastName = HTMLheaderLastName.replace("%data%", lastName);
     var formattedName = formattedFirstName + formattedLastName;
     $("#header").append(formattedName);
 
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     $("#header").append(formattedRole);
 
-    var formattedPic = HTMLbioPic.replace("%data%", bio.pictureURL);
+    var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
     $("#header").append(formattedPic);
 
     /*As I already built a skills section, there is no need to display this
